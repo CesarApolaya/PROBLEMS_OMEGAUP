@@ -1,0 +1,40 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<vector>
+#include<string>
+#include<algorithm>
+	
+#define ll long long
+using namespace std;
+
+/*
+Escribir un programa en C++ que teniendo como datos de entrada dos números enteros,
+determine si el primer número es múltiplo del segundo.
+Ejemplo:
+Ingrese dos números enteros (N1 N2):9 3
+9 es múltiplo de 3
+Ingrese dos números enteros (N1 N2):10 7
+10 no es múltiplo de 7
+*/
+			
+int entrada(){
+	int a, b;
+	cout << "Ingrese dos numeros enteros: "; cin >> a >> b;
+	bool x = 0;
+	if(a%b==0)
+	x = 1;
+	return x;
+}				
+
+void solve(bool a){
+	string mensaje = a?"El primer numero ingresado es multiplo del segundo":"El primer numero ingresado no es multiplo del segundo";
+	cout << mensaje;
+}
+
+int main() {
+	int c = entrada();
+	solve(c);
+
+	return 0;
+}
