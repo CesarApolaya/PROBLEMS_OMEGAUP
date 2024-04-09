@@ -1,0 +1,50 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<vector>
+#include<string>
+#include<algorithm>
+	
+#define ll long long
+using namespace std;		
+
+/*
+Escribir un programa en C++, que permita calcular el precio de una entrada al cine,
+considerando lo siguiente:
+-Si la persona tiene menos de 18 años pagará 7 soles.
+-Si la persona tiene de 18 a 50 años pagará 15 soles.
+-Si la persona tiene más de 50 años pagará 5 soles.
+Debe validar que la edad es un valor mayor que cero.
+Ejemplo:
+Ingrese la edad de la persona: 18 años
+El precio de la entrada es de 15 soles
+
+*/			
+
+int ingrese(){
+	int edad;
+	cout << "Ingrese la edad de la persona: "; cin >> edad;
+	return edad;
+}
+
+void solve(int a){
+	int precio;
+	if(a<18)
+	precio = 7;
+	else if(a>=18&&a<=50)
+	precio = 15;
+	else if(a>50)
+	precio = 5;
+	else 
+	cout << "Ingrese un numero mayor a 0";
+	cout << "El precio a pagar es: " << precio;
+}
+
+				
+int main() {	
+	int edad = ingrese();
+	solve(edad);
+
+
+	return 0;
+}
