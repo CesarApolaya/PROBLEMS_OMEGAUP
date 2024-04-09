@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<vector>
+#include<string>
+#include<algorithm>
+	
+#define ll long long
+using namespace std;
+/*
+Escribir un programa en C++ que teniendo como dato de entrada un número entero, determine
+si el número es par o impar.
+Ejemplo
+Ingrese un número entero: 364
+Es un número par
+*/	
+			
+				
+int main() {	
+	int n; cin >> n;
+	if(n%2==0)
+	cout << "El numero es par";
+	else
+	cout << "El numero es impar";
+
+	return 0;
+}
