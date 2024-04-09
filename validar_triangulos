@@ -1,0 +1,41 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<vector>
+#include<string>
+#include<algorithm>
+	
+#define ll long long
+using namespace std;		
+
+/*
+Escribir un programa en C++ que reciba como datos tres números positivos y que verifique si
+constituyen los lados de un triángulo. En caso afirmativo debe de mostrar el siguiente mensaje:
+“SI ES UN TRIANGULO”, y en caso contrario “NO ES UN TRIANGULO”.
+Para que formen un triángulo se debe de cumplir lo siguiente: Cada lado debe ser menor a la
+suma y mayor a la diferencia de los otros dos lados.
+Ejemplos:
+Ingrese los lados de un triángulo (A B C): 3 4 5
+SI ES UN TRIANGULO
+Ingrese los lados de un triángulo (A B C): 1 2 8
+NO ES UN TRIANGULO
+*/
+
+
+int numeros(){
+	int a, b, c;
+	bool validar = 0;
+	cout << "Ingrese los lados delete triangulo: ";
+	cin >> a >> b >> c;
+	if(a+b>c&&b+c>a&&a+c>b)
+	validar = 1;
+	return validar;
+}
+			
+int main() {	
+	int lados = numeros();
+	string mensaje = lados?"SI ES UN TRIANGULO":"NO ES UN TRIANGULO";
+	cout << mensaje;
+
+	return 0;
+}
