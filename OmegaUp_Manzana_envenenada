@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<vector>
+#include<string>
+#include<algorithm>
+	
+#define ll long long
+using namespace std;		
+   
+void solve(float a, float b){
+	if(a>0&&(b>=50&&b<=120)){
+		b*=3;
+		if(b>a){
+			cout << "SEGURO";
+		}
+		else if(b<a){
+			a-=b;
+			a++;
+			cout << a;
+		}
+	}
+}
+
+
+int main() {
+	float c, p; cin >> c >> p;
+	solve(c,p);
+
+	return 0;
+}
