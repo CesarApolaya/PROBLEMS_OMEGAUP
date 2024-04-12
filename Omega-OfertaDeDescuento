@@ -1,0 +1,23 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<iomanip>
+	
+#define ll long long
+using namespace std;		
+			
+				
+int main() {	
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	ios_base::sync_with_stdio(false);
+	float n, a; cin >> n >> a;
+	float x = n;
+	a/=100;
+	n*=a; 
+	cout << fixed << setprecision(2) << x - n;
+	return 0;
+}
